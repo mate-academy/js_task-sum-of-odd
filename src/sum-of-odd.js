@@ -19,6 +19,7 @@
  * rowSumOddNumbers(1); // 1
  * rowSumOddNumbers(2); // 3 + 5 = 8
  * rowSumOddNumbers(-1); // 0
+ *
  * @param {number} row
  *
  * @return {number}
