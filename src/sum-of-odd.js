@@ -12,8 +12,9 @@
  * 21    23    25    27    29
  * ...
  *
- * Calculate the row sums of this triangle from the row
- * index (starting at index 1) e.g.:
+ * Calculate the sum of all numbers in a row of the triangle
+ *
+ * Row index (starting at index 1) e.g.:
  *
  * rowSumOddNumbers(1); // 1
  * rowSumOddNumbers(2); // 3 + 5 = 8
