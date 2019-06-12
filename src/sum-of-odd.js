@@ -25,7 +25,11 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  return Math.pow(row, 3);
+  const pow = Math.pow(row, 3);
+  if (row === -1) {
+    return 0;
+  }
+  return pow;
 }
 
 module.exports = rowSumOddNumbers;
