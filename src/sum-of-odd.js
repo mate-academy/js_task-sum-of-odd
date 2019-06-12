@@ -26,7 +26,7 @@
  */
 function rowSumOddNumbers(row) {
   const pow = Math.pow(row, 3);
-  if (row === -1) {
+  if (row < 0) {
     return 0;
   }
   return pow;
