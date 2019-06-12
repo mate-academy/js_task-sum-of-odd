@@ -25,6 +25,17 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
+  let position = 0;
+  let result = 0;
+  for (let x = row - 1; x > 0; x--) {
+    position = position + x; //  At first we need to find starting index
+  } // In our case it will be summ of all prev numbers + 1
+  for (let i = 0; i < row; i++) { //  Using loop we foud the summ of all numbers
+    result = result + 2 * (position + 1 + i) - 1;
+  }
+
+  return result;
+
   // write code here
 }
 
