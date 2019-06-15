@@ -25,14 +25,10 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  let result = 0;
-  for (let i = 1; i < row; i += 2) {
-    result += row * i * 4;
+  if (row > 0) {
+    return Math.pow(row, 3);
   }
-  if (row > 500) {
-    result += 63185661;
-  }
-  return result;
+  return 0;
 }
 
 module.exports = rowSumOddNumbers;
