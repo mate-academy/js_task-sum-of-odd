@@ -24,8 +24,25 @@
  *
  * @return {number}
  */
+
+const sumirize = function(startNum, endNum) {
+  return startNum < endNum
+    ? endNum + sumirize(startNum, endNum - 2)
+    : endNum;
+};
+
 function rowSumOddNumbers(row) {
   // write code here
+  let result = 0;
+  if (row < 0) {
+    return result;
+  }
+
+  const minElem = Math.pow(row, 2) - (row - 1);
+  const maxElem = minElem + (row - 1) * 2;
+  result = sumirize(minElem, maxElem);
+
+  return result;
 }
 
 module.exports = rowSumOddNumbers;
