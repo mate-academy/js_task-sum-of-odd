@@ -28,8 +28,10 @@ function rowSumOddNumbers(row) {
   if (row <= 0) {
     return 0;
   }
+
   let sumOddNumbers = 0;
   const serialFirstNumInRow = 1 + (row ** 2 - row) / 2;
+
   for (let i = serialFirstNumInRow; i < serialFirstNumInRow + row; i++) {
     sumOddNumbers += 2 * i - 1;
   }
