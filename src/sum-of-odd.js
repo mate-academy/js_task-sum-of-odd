@@ -25,11 +25,11 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  let result = row * row * row;
+  let resultSum = row * row * row;
   if (row < 0) {
-    result = 0;
+    resultSum = 0;
   }
-  return result;
+  return resultSum;
 }
 
 module.exports = rowSumOddNumbers;
