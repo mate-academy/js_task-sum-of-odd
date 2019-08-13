@@ -23,9 +23,24 @@
  * @param {number} row
  *
  * @return {number}
- */
+ *
+//formula == 1 + row * (row -1) - first number in row
+//formula == 1 + row * (row -1) + 2 - next number in row
+//formula == 1 + row * (row -1) + 4 - next number in row
+//....
+//formula == 1 + row * (row -1) + 2 * row - last number in row
+*/
+
 function rowSumOddNumbers(row) {
-  // write code here
+  let summNumberInRow = 0;
+
+  for (let i = 0; i < row; i++) {
+    summNumberInRow = summNumberInRow + (1 + row * (row - 1)) + 2 * i;
+  }
+
+  return summNumberInRow;
 }
 
+// при подсчете было получено вот такое решение: summ = row * row * row
+// второй способ решения
 module.exports = rowSumOddNumbers;
