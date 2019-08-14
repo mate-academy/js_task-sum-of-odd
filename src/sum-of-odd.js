@@ -25,7 +25,13 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  const firstNumberInRow = 1 + ((2 * 2 + 2 * (row - 1 - 1)) / 2 * (row - 1));
+
+  if (row < 1) {
+    return 0;
+  }
+
+  return ((2 * firstNumberInRow + 2 * (row - 1)) / 2 * row);
 }
 
 module.exports = rowSumOddNumbers;
