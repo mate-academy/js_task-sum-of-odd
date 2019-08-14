@@ -25,7 +25,17 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row <= 0) {
+    return 0;
+  }
+
+  let sumOddNumbers = 0;
+  const serialFirstNumInRow = 1 + (row ** 2 - row) / 2;
+
+  for (let i = serialFirstNumInRow; i < serialFirstNumInRow + row; i++) {
+    sumOddNumbers += 2 * i - 1;
+  }
+  return sumOddNumbers;
 }
 
 module.exports = rowSumOddNumbers;
