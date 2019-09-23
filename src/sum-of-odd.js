@@ -31,5 +31,4 @@ function rowSumOddNumbers(row) {
   }
   return Math.pow(row, 3);
 }
-
 module.exports = rowSumOddNumbers;
