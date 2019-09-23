@@ -25,11 +25,8 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  let j = 0;
+  let j = row * (row - 1) / 2;
   let res = 0;
-  for (let i = 1; i < row; i++) {
-    j = j + i;
-  }
   for (let i = 1; i <= row; i++) {
     j++;
     res = res + 2 * j - 1;
