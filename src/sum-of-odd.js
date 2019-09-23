@@ -25,7 +25,20 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  let char = 0;
+  const arr = [];
+  if (row <= 0) {
+    return 0;
+  }
+  for (let i = 0; i <= row; i++) {
+    char += i;
+  }
+  for (let i = 0; i <= char * 2; i++) {
+    if (i % 2) {
+      arr.push(i);
+    }
+  }
+  return arr.slice(-row).reduce((sum, current) => sum + current);
 }
 
 module.exports = rowSumOddNumbers;
