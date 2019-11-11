@@ -25,7 +25,14 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
-}
+  if (row < 0) { return 0; };
+  const lastDigit = ((row * row) + (row - 1));
+  const triangleLine = [];
 
+  for (let i = 0; i < row; i++) {
+    triangleLine.push(lastDigit - 2 * i);
+  }
+
+  return triangleLine.reduce((a, b) => { return a + b; });
+}
 module.exports = rowSumOddNumbers;
