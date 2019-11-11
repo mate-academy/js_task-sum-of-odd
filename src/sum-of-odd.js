@@ -26,6 +26,14 @@
  */
 function rowSumOddNumbers(row) {
   // write code here
+  // 8 = 2 ^ 3, 27 = 3 ^ 3, 64 = 4 ^ 3, 125 = 5 ^ 3;
+  if (row <= 0) {
+    return 0;
+  }
+
+  if (row > 0) {
+    return Math.pow(row, 3);
+  }
 }
 
 module.exports = rowSumOddNumbers;
