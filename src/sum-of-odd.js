@@ -32,9 +32,11 @@ function rowSumOddNumbers(row) {
 
   const firstNumber = row * row - (row - 1);
   let sum = 0;
+
   for (let i = 0; i < row; i++) {
     sum += firstNumber + 2 * i;
   }
+
   return sum;
 }
 
