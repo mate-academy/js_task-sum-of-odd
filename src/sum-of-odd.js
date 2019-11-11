@@ -26,11 +26,12 @@
  */
 function rowSumOddNumbers(row) {
   let start = row * row - (row - 1);
-  let rez = 0;
-  for (start; start <= (row * row + row - 1); start = start + 2) {
-    rez += start;
+  let result = 0;
+  for (start; start <= (row * row + row - 1); start += 2) {
+    result += start;
   }
-  return rez;
+
+  return result;
 }
 
 module.exports = rowSumOddNumbers;
