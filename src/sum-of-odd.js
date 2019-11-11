@@ -25,7 +25,19 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row < 0) { return 0; };
+  const triangle = [[1]];
+
+  for (let i = 1; i < row; i++) {
+    const rowLine = [];
+    rowLine.push(triangle[i - 1].slice(-1)[0] + 2);
+    for (let a = 0; a < i; a++) {
+      rowLine.push(rowLine.slice(-1)[0] + 2);
+    };
+    triangle.push(rowLine);
+  };
+
+  return triangle[row - 1].reduce((a, b) => { return a + b; });
 }
 
 module.exports = rowSumOddNumbers;
