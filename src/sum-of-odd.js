@@ -26,7 +26,7 @@
  */
 function rowSumOddNumbers(row) {
   if (row > 0) {
-    return +Math.pow(row, 3); // write code here
+    return Math.pow(row, 3); // write code here
   } else {
     return 0;
   }
