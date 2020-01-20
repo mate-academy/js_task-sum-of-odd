@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ *  fs_on_dec19_salogubova
  * Implement sumOfOdd function:
  *
  * Given the triangle of consecutive odd numbers:
