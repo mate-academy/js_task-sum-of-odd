@@ -25,7 +25,33 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row < 1) {
+    return 0;
+  } else if (row === 1) {
+    return 1;
+  } else {
+    let numRow = row;
+    let amountNum = 0;
+
+    for (let i = 1; i <= row; i++) {
+      amountNum += numRow;
+      numRow -= 1;
+    }
+
+    const arr = [1];
+    let triangleNum = 1;
+
+    for (let j = 1; j < amountNum; j++) {
+      triangleNum += 2;
+      arr.push(triangleNum);
+    }
+
+    const needNum = arr.slice(-row);
+
+    return needNum.reduce(function(sum, current) {
+      return sum + current;
+    }, 0);
+  }
 }
 
 module.exports = rowSumOddNumbers;
