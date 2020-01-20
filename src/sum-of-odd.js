@@ -25,21 +25,7 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  let tempRow = row - 1;
-  let start = 0;
-  let result = 0;
-
-  while (tempRow > 0) {
-    start += tempRow;
-    --tempRow;
-  }
-  start = start * 2;
-
-  for (let i = 0; i < row; ++i) {
-    result += start + i * 2 + 1;
-  }
-
-  return result;
+  return row > 0 ? Math.pow(row, 3) : 0;
 }
 
 module.exports = rowSumOddNumbers;
