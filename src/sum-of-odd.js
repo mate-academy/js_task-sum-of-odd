@@ -25,7 +25,14 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  const firstNumInRow = 1 + ((row - 1) * row);
+  let rowSum = 0;
+
+  for (let i = 0; i < row; i++) {
+    rowSum = rowSum + firstNumInRow + (i * 2);
+  }
+
+  return rowSum;
 }
 
 module.exports = rowSumOddNumbers;
