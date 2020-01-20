@@ -26,11 +26,7 @@
  */
 function rowSumOddNumbers(row) {
   // write code here
-  if (row < 0) {
-    return 0;
-  } else {
-    return row**3;
-  }
+  return row < 0 ? 0 : row ** 3;
 }
 
 module.exports = rowSumOddNumbers;
