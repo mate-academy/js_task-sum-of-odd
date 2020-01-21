@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+
+  function rowSumOddNumbers(row) {
+    let num = 0;
+
+    for (let i = 1; i < row; i++) {
+      for (let j = 0; j < i; j++) {
+        num += 2;
+      }
+    }
+
+    let firstDigit = num - 1;
+    let arr = [];
+
+    for(let i = 0; i < row; i++) {
+      firstDigit+=2;
+      arr.push(firstDigit);
+    }
+
+    const result = arr.reduce((a,b)=> {
+      return a + b;
+    });
+    return result
+  }
+  rowSumOddNumbers(4)
+
+
+
+
+
+</script>
+
+</body>
+</html>
