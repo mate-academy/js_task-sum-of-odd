@@ -27,9 +27,9 @@
 function rowSumOddNumbers(row) {
   if (row < 0) {
     return 0;
-  } else {
-    return row * row * row;
   }
+
+  return row ** 3;
 }
 
 module.exports = rowSumOddNumbers;
