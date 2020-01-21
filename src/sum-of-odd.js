@@ -25,7 +25,7 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  const firstRowElement = row * (row - 1) + 1; // firstElemOfRow
+  const firstRowElement = row * (row - 1) + 1;
   let sumOdd = 0;
 
   for (let i = 0; i < row; i++) {
