@@ -25,26 +25,9 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  const arr = [];
-  let x = 1;
-  let summ = 0;
+  const summ = (row ** 3);
 
-  if (row < 0) {
-    return 0;
-  }
-
-  for (let i = 0; i < ((row * (row + 1)) / 2); i++) {
-    arr.push(x);
-    x += 2;
-  }
-
-  arr.splice(0, ((row - 1) * row) / 2);
-
-  for (let i = 0; i < arr.length; i++) {
-    summ = summ + arr[i];
-  }
-
-  return summ;
+  return (row > 0) ? summ : 0;
 }
 
 module.exports = rowSumOddNumbers;
