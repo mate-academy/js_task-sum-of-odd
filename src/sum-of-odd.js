@@ -28,18 +28,7 @@ function rowSumOddNumbers(row) {
   if (row < 0) {
     return 0;
   } else {
-    const arr = [];
-    let i = 0;
-    const num = (((row - 1) ** 2 + (row - 1)) / 2) + 1;
-    let elem = 2 * num - 1;
-
-    while (i < row) {
-      arr.push(elem);
-      elem += 2;
-      i++;
-    }
-
-    return arr.reduce((sum, current) => sum + current, 0);
+    return row ** 3;
   }
 }
 
