@@ -5,11 +5,7 @@
  *
  * Given the triangle of consecutive odd numbers:
  *
- *             1
- *          3     5
- *       7     9    11
- *    13    15    17    19
- * 21    23    25    27    29
+
  * ...
  *
  * Calculate the sum of all numbers in a row of the triangle
@@ -29,25 +25,7 @@ function rowSumOddNumbers(row) {
     return 0;
   }
 
-  function countFirstOdd(actualRow) {
-    let firstOdd = 0;
-
-    for (let i = 1; i < actualRow; i++) {
-      firstOdd += i;
-    }
-
-    return ((firstOdd * 2) + 1);
-  }
-
-  let num = countFirstOdd(row);
-  let result = num;
-
-  for (let i = 1; i < row; i++) {
-    num += 2;
-    result += num;
-  }
-
-  return result;
+  return Math.pow(row, 3);
 }
 
 module.exports = rowSumOddNumbers;
