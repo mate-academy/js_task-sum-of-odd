@@ -25,7 +25,24 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  let result = 0;
+  const initial = 1;
+  const oddExtender = 2;
+  let lastIndex = 0;
+  let lastNum = 0;
+  // let's get last index of a number in a given row
+
+  for (let i = 0; i <= row; i++) {
+    lastIndex += i;
+  }
+  // let's count the last Number in given row
+  lastNum = (oddExtender * lastIndex) - initial;
+
+  for (let i = 0; i < row; i++) {
+    result += lastNum - (2 * i);
+  }
+
+  return result;
 }
 
 module.exports = rowSumOddNumbers;
