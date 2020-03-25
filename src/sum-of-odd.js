@@ -27,7 +27,7 @@
 function rowSumOddNumbers(row) {
   const arr = [];
   let x = 1;
-  let sum = 0;
+  let summ = 0;
 
   if (row < 0) {
     return 0;
@@ -41,10 +41,10 @@ function rowSumOddNumbers(row) {
   arr.splice(0, ((row - 1) * row) / 2);
 
   for (let i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
+    summ = summ + arr[i];
   }
 
-  return sum;
+  return summ;
 }
 
 module.exports = rowSumOddNumbers;
