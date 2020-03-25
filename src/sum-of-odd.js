@@ -25,6 +25,11 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
+  if (row > 0) {
+    return Math.pow(row, 3);
+  } else {
+    return 0;
+  }
   // write code here
 }
 
