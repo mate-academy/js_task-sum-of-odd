@@ -25,7 +25,27 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  const numbersAmount = numbersAmounFunc(row);
+  const numbersOddArr = [];
+  let sumOddRow = 0;
+
+  for (let i = 0; i <= numbersAmount * 2; i++) {
+    if (i % 2 !== 0) {
+      numbersOddArr.push(i);
+    }
+  }
+
+  const numbersOddRow = numbersOddArr.slice(-row);
+
+  for (let j = 0; j < numbersOddRow.length; j++) {
+    sumOddRow += numbersOddRow[j];
+  }
+
+  return sumOddRow;
+
+  function numbersAmounFunc(count) {
+    return (count) > 1 ? count + numbersAmounFunc(count - 1) : 1;
+  };
 }
 
 module.exports = rowSumOddNumbers;
