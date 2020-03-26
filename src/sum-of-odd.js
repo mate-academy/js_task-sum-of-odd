@@ -26,6 +26,11 @@
  */
 function rowSumOddNumbers(row) {
   // write code here
+  if (Math.sign(row) === (-1)) {
+    return 0;
+  }
+
+  return row * row * row;
 }
 
 module.exports = rowSumOddNumbers;
