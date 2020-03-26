@@ -12,10 +12,7 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // eslint-disable-next-line no-param-reassign
-  row > 0 ? row *= row * row : row = 0;
-
-  return row;
+  return row > 0 ? row ** 3 : 0;
 }
 
 module.exports = rowSumOddNumbers;
