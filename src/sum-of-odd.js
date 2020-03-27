@@ -26,7 +26,8 @@
  */
 
 /* Here is the evidence that a row in this triangle
-is equal to number of row raised to third power */
+is equal to number of row raised to third power
+https://www.themathpage.com/Arith/cubes.htm */
 
 function rowSumOddNumbers(row) {
   return row <= 0 ? 0 : Math.pow(row, 3);
