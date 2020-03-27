@@ -24,8 +24,12 @@
  *
  * @return {number}
  */
+
+/* Here is the evidence that a row in this triangle
+is equal to number of row raised to third power */
+
 function rowSumOddNumbers(row) {
-  // write code here
+  return row <= 0 ? 0 : Math.pow(row, 3);
 }
 
 module.exports = rowSumOddNumbers;
