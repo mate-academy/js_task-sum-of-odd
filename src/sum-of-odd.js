@@ -26,6 +26,28 @@
  */
 function rowSumOddNumbers(row) {
   // write code here
+  if (row <= 0) {
+    return 0;
+  }
+
+  if (row === 1) {
+    return 1;
+  }
+
+  let startNum = 1;
+
+  for (let i = 1; i < row; i++) {
+    startNum += i * 2;
+  }
+
+  let result = startNum;
+
+  for (let i = 1; i < row; i++) {
+    startNum += 2;
+    result += startNum;
+  }
+
+  return result;
 }
 
 module.exports = rowSumOddNumbers;
