@@ -24,8 +24,7 @@
  *
  * @return {number}
  */
-function rowSumOddNumbers(row) {
-  // write code here
-}
+const rowSumOddNumbers = (row) =>
+  row > 0 ? Math.pow(row, 3) : 0;
 
 module.exports = rowSumOddNumbers;
