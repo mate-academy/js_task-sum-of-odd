@@ -29,7 +29,7 @@ function rowSumOddNumbers(row) {
     return 0;
   };
 
-  return row * row * row;
+  return row ** 3;
 }
 
 module.exports = rowSumOddNumbers;
