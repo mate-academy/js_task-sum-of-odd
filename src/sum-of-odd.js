@@ -31,10 +31,11 @@ function rowSumOddNumbers(row) {
   }
 
   const firstNum = row * (row - 1) + 1;
-  let sum = firstNum;
+  const lastNum = firstNum + (row - 1) * 2;
+  let sum = 0;
 
-  for (let i = 1; i < row; i++) {
-    sum += firstNum + i * 2;
+  for (let i = firstNum; i <= lastNum; i += 2) {
+    sum += i;
   }
 
   return sum;
