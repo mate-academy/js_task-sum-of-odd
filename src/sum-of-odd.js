@@ -29,20 +29,7 @@ function rowSumOddNumbers(row) {
     return 0;
   }
 
-  let currentRow = 0;
-  let num = -1;
-  const currenRowArr = [];
-
-  for (let i = 0; i < row; i++) {
-    currentRow++;
-
-    for (let j = 0; j < currentRow; j++) {
-      num += 2;
-      currenRowArr[j] = num;
-    }
-  }
-
-  return currenRowArr.reduce((a, b) => a + b);
+  return row ** 3;
 }
 
 module.exports = rowSumOddNumbers;
