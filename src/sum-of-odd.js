@@ -29,14 +29,14 @@ function rowSumOddNumbers(row) {
     return 0;
   }
 
-  let currenRow = 0;
+  let currentRow = 0;
   let num = -1;
   const currenRowArr = [];
 
   for (let i = 0; i < row; i++) {
-    currenRow++;
+    currentRow++;
 
-    for (let j = 0; j < currenRow; j++) {
+    for (let j = 0; j < currentRow; j++) {
       num += 2;
       currenRowArr[j] = num;
     }
