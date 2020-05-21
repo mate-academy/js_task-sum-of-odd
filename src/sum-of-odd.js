@@ -26,13 +26,13 @@
  */
 function rowSumOddNumbers(row) {
   let start = row * row - (row - 1);
-  let i = 0;
+  let counter = 0;
   let sum = 0;
 
-  while (i < row) {
+  while (counter < row) {
     sum += start;
     start += 2;
-    i++;
+    counter++;
   }
 
   return sum;
