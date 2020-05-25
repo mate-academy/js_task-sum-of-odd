@@ -25,7 +25,7 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  return row > 0? Math.pow(row, 3): 0;
 }
 
 module.exports = rowSumOddNumbers;
