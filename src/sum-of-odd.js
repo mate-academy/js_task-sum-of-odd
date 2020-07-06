@@ -26,6 +26,19 @@
  */
 function rowSumOddNumbers(row) {
   // write code here
+  if (row <= 0) {
+    return 0;
+  }
+
+  let sum = 0;
+  const edgeNumber = ((row + 1) / 2) * row;
+  const numberOfIteration = edgeNumber - row;
+
+  for (let i = edgeNumber; i > numberOfIteration; i--) {
+    sum += 2 * i - 1;
+  }
+
+  return sum;
 }
 
 module.exports = rowSumOddNumbers;
