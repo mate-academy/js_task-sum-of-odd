@@ -10,7 +10,7 @@
  *       7     9    11
  *    13    15    17    19
  * 21    23    25    27    29
- * ...
+ rowLength++; * ...
  *
  * Calculate the sum of all numbers in a row of the triangle
  *
@@ -25,7 +25,29 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row <= 0) {
+    return 0;
+  }
+
+  let i = row;
+  let rowLength = 0;
+  let oddDigit = 1;
+
+  while (i > 0) {
+    rowLength++;
+    for (let j = 1; j < rowLength; j++) {
+      oddDigit += 2;
+    }
+    i--;
+  }
+
+  let oddSum = oddDigit;
+  for (let j = 1; j < rowLength; j++) {
+    oddDigit += 2;
+    oddSum += oddDigit;
+  }
+
+  return oddSum;
 }
 
 module.exports = rowSumOddNumbers;
