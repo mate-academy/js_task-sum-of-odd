@@ -25,7 +25,17 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  let start = row * row - (row - 1);
+  let counter = 0;
+  let sum = 0;
+
+  while (counter < row) {
+    sum += start;
+    start += 2;
+    counter++;
+  }
+
+  return sum;
 }
 
 module.exports = rowSumOddNumbers;
