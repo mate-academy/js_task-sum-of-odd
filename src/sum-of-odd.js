@@ -25,7 +25,22 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  const lastOddNumber = row * (row + 1) - 1;
+  let intermediateDigit = row + row - 1;
+  let oddResult = lastOddNumber;
+
+  if (row < 0) {
+    return 0;
+  }
+
+  while (intermediateDigit > 0) {
+    if ((lastOddNumber - intermediateDigit) % 2 !== 0) {
+      oddResult += lastOddNumber - intermediateDigit;
+    }
+    intermediateDigit--;
+  }
+
+  return oddResult;
 }
 
 module.exports = rowSumOddNumbers;
