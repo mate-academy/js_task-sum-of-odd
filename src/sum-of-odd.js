@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ *  fs_on_dec19_salogubova
  * Implement sumOfOdd function:
  *
  * Given the triangle of consecutive odd numbers:
@@ -25,7 +26,18 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
-}
+  let startElemOfLastRow = 1;
+  let lastElementOfLastRow = null;
 
+  if (row <= 0) {
+    return 0;
+  }
+
+  for (let i = 0; i <= row; i++) {
+    startElemOfLastRow = i * i - (i - 1);
+    lastElementOfLastRow = startElemOfLastRow + (row - 1) * 2;
+  }
+
+  return (startElemOfLastRow + lastElementOfLastRow) * row / 2;
+}
 module.exports = rowSumOddNumbers;
