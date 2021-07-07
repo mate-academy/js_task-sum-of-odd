@@ -25,7 +25,31 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row <= 0) {
+    return 0;
+  }
+
+  let numbersOfRow = [];
+  const arrayOfRows = [];
+  let maxIndexOfRowArray = 1;
+  let number = 1;
+
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < maxIndexOfRowArray; j++) {
+      numbersOfRow.push(number);
+      number += 2;
+    }
+    maxIndexOfRowArray++;
+    arrayOfRows.push(numbersOfRow);
+    numbersOfRow = [];
+  }
+
+  let summ = 0;
+
+  for (let i = 0; i < arrayOfRows[row - 1].length; i++) {
+    summ += arrayOfRows[row - 1][i];
+  }
+  return summ;
 }
 
 module.exports = rowSumOddNumbers;
