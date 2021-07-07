@@ -25,7 +25,23 @@
  * @return {number}
  */
 function rowSumOddNumbers(row) {
-  // write code here
+  if (row <= 0) {
+    return 0;
+  }
+  function quantityNum(num) {
+    return num ? num + quantityNum(num - 1) : 1;
+  }
+  let count = quantityNum(row);
+  const oddMassive = [];
+  for (let i = 1; i < count; i++) {
+    if (i % 2 !== 0) {
+      oddMassive.push(i);
+    } else {
+      count++;
+    }
+  }
+  const oddSum = oddMassive.slice(-row);
+  return oddSum.reduce((sum, current) => sum + current, 0);
 }
 
 module.exports = rowSumOddNumbers;
